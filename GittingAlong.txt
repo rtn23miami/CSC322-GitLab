@@ -1,0 +1,82 @@
+# Git and GitHub Command Sequence
+
+# 1. Create a directory called GitLab
+mkdir GitLab
+
+# 2. Put HelloWorld.c in that directory
+cd GitLab
+vi HelloWorld.c
+
+# 3. Initialize a Git repository in the directory
+git init
+
+# 4. Add HelloWorld.c to the repository
+git add HelloWorld.c
+
+# 5. Commit the file
+git commit -m "Initial commit with HelloWorld.c"
+
+# 6. Create a public Github repository called CSC322-GitLab
+# (Done via GitHub web interface at github.com)
+
+# 7. Link the Git and Github repositories
+git remote add origin git@github.com:rtn23miami/CSC322-GitLab.git
+
+# 8. Push the initial repository
+git config core.sshCommand "ssh -i ~/.ssh/id_ed25519_gitlab"
+git branch -M main
+git push -u origin main
+
+# 9. Edit HelloWorld.c to "Hello Crool World!"
+vi HelloWorld.c
+
+# 10. Commit and push
+git add HelloWorld.c
+git commit -m "Changed to Hello Crool World"
+git push
+
+# 11. Create a branch called "Happy"
+git branch Happy
+
+# 12. Switch to the Happy branch
+git checkout Happy
+
+# 13. Push the branch to Github
+git push -u origin Happy
+
+# 14. Edit HelloWorld.c to "Hello Happy World!"
+vi HelloWorld.c
+
+# 15. Commit and push
+git add HelloWorld.c
+git commit -m "Changed to Hello Happy World"
+git push
+
+# 16. Switch to the main branch
+git checkout main
+
+# 17. Edit HelloWorld.c to "Hello Very Crool World!"
+vi HelloWorld.c
+
+# 18. Commit and push
+git add HelloWorld.c
+git commit -m "Changed to Hello Very Crool World"
+git push
+
+# 19. Merge the changes from the Happy branch
+git merge Happy
+vi HelloWorld.c
+# (Resolved conflict to "Hello Very Happy World!")
+git add HelloWorld.c
+git commit -m "Merged Happy branch - Hello Very Happy World"
+
+# 20. Push the merge
+git push
+
+# 21. Edit HelloWorld.c to "Hello Crazy World!"
+vi HelloWorld.c
+
+# 22. Commit and push
+git add HelloWorld.c
+git commit -m "Changed to Hello Crazy World"
+git push
