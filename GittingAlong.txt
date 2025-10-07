@@ -17,7 +17,7 @@ git add HelloWorld.c
 git commit -m "Initial commit with HelloWorld.c"
 
 # 6. Create a public Github repository called CSC322-GitLab
-# (Done via GitHub web interface at github.com)
+gh repo create CSC322-GitLab --public)
 
 # 7. Link the Git and Github repositories
 git remote add origin git@github.com:rtn23miami/CSC322-GitLab.git
